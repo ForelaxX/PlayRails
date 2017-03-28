@@ -39,4 +39,11 @@ class UserTest < ActiveSupport::TestCase
     @user.save
     assert_not another_user.valid?
   end
+
+  test "user email should be saved as lowercase" do
+    upper_email = "EMAMPLE@qq.com"
+    @user.email = upper_email
+    @user.save
+    assert_equal @user.reload.email, upper_email.downcase
+  end
 end
