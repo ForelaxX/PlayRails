@@ -58,3 +58,13 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
+
+@mixin box_sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.debug_dump {
+  clear: both;
+}
