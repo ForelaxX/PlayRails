@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get '/signup', to: 'user#new'
+  get '/signup', to: 'users#new'
 
   get 'help', to: 'static_pages#help'
 
@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'contact', to: 'static_pages#contact'
 
   root 'static_pages#home'
+
+  resources :users
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
