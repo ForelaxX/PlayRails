@@ -1,2 +1,13 @@
-<h1>User#new</h1>
-<p>Find me in app/views/user/new.html.erb</p>
+<% content_for :title, "New User" %>
+<%= form_for @user do |f| %>
+  <%= render 'shared/error_view' %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+  <%= f.submit "create user", class: 'btn btn-primary' %>
+<% end %>
