@@ -1,0 +1,6 @@
+- content_for :title, @user.name
+.row
+  %aside.col-md-4
+    %section
+      = genereate_gravatar @user
+      %h1= @user.name
